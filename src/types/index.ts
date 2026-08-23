@@ -81,6 +81,7 @@ export interface LeadSubmission {
 
 export interface AgencySettings {
   agencyName: string;
+  logoUrl?: string;
   tagline: string;
   bookingUrl: string;
   email: string;

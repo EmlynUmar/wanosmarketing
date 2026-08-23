@@ -57,8 +57,47 @@ export const SettingsTab: React.FC = () => {
         {/* Core Agency Info */}
         <div className="p-6 rounded-2xl bg-[#0f1622] border border-slate-800 space-y-4">
           <h3 className="text-sm font-bold text-white uppercase tracking-wider text-emerald-400">
-            Agency Identity & Positioning
+            Agency Identity & Brand Logo
           </h3>
+
+          {/* Brand Logo Configuration */}
+          <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex flex-col sm:flex-row sm:items-center gap-4">
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 p-[1.5px] shrink-0">
+              <div className="w-full h-full bg-[#090d14] rounded-[10px] flex items-center justify-center overflow-hidden">
+                <img
+                  src={formData.logoUrl || '/assets/IMG_20260821_212107_940.jpg'}
+                  alt="Brand Logo Preview"
+                  className="w-full h-full object-cover scale-110"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/assets/IMG_20260821_212107_940.jpg';
+                  }}
+                />
+              </div>
+            </div>
+
+            <div className="flex-1 space-y-1.5">
+              <label className="block text-xs font-semibold text-slate-300">Brand Logo URL (WM Emblem)</label>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <input
+                  type="text"
+                  placeholder="/assets/IMG_20260821_212107_940.jpg"
+                  value={formData.logoUrl || ''}
+                  onChange={(e) => setFormData({ ...formData, logoUrl: e.target.value })}
+                  className="flex-1 px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs focus:border-emerald-500 focus:outline-none"
+                />
+                <button
+                  type="button"
+                  onClick={() => setFormData({ ...formData, logoUrl: '/assets/IMG_20260821_212107_940.jpg' })}
+                  className="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-emerald-400 border border-slate-700 whitespace-nowrap transition-colors"
+                >
+                  Use Default WM Logo
+                </button>
+              </div>
+              <p className="text-[11px] text-slate-500">
+                Active official WM brand emblem. Displays across Navbar, Footer, and Admin Console.
+              </p>
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
             <div>

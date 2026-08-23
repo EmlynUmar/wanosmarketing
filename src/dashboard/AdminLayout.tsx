@@ -1,5 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
+import { Logo } from '../components/Logo';
 import { OverviewTab } from './OverviewTab';
 import { CaseStudiesTab } from './CaseStudiesTab';
 import { StatsTab } from './StatsTab';
@@ -52,22 +53,7 @@ export const AdminLayout: React.FC = () => {
       {/* Top Admin Bar */}
       <header className="sticky top-0 z-30 bg-[#090d14]/90 backdrop-blur-md border-b border-slate-800 px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
-            <ShieldCheck className="w-4 h-4" />
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="font-extrabold text-sm text-white font-display">
-                {agencySettings.agencyName}
-              </span>
-              <span className="px-2 py-0.2 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold border border-emerald-500/30">
-                Admin Console
-              </span>
-            </div>
-            <span className="text-[10px] text-slate-400">
-              Live CMS & Growth Management Engine
-            </span>
-          </div>
+          <Logo size="sm" showBadge={true} badgeText="Admin Console" />
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3">

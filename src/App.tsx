@@ -3,13 +3,8 @@ import { useApp } from './context/AppContext';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './sections/HeroSection';
 import { BrandsTickerSection } from './sections/BrandsTickerSection';
-import { ProofShowcaseSection } from './sections/ProofShowcaseSection';
 import { ServicesSection } from './sections/ServicesSection';
-import { ProcessSection } from './sections/ProcessSection';
-import { CaseStudiesSection } from './sections/CaseStudiesSection';
-import { RoiCalculator } from './components/RoiCalculator';
-import { TestimonialsSection } from './sections/TestimonialsSection';
-import { FaqSection } from './sections/FaqSection';
+import { ProofShowcaseSection } from './sections/ProofShowcaseSection';
 import { CtaSection } from './sections/CtaSection';
 import { Footer } from './components/Footer';
 import { ProofModal } from './components/ProofModal';
@@ -37,13 +32,8 @@ export const MainApp: React.FC = () => {
       <main className="flex-1">
         <HeroSection />
         <BrandsTickerSection />
-        <ProofShowcaseSection />
         <ServicesSection />
-        <ProcessSection />
-        <CaseStudiesSection />
-        <RoiCalculator />
-        <TestimonialsSection />
-        <FaqSection />
+        <ProofShowcaseSection />
         <CtaSection />
       </main>
       <Footer />

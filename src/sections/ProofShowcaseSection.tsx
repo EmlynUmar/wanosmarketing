@@ -2,151 +2,132 @@ import React from 'react';
 import { useApp } from '../context/AppContext';
 import { 
   ShieldCheck, 
-  TrendingUp, 
-  DollarSign, 
-  ShoppingCart, 
-  Sparkles, 
   Maximize2, 
   ArrowRight,
-  CheckCircle2,
-  Calendar
+  Calendar,
+  Sparkles
 } from 'lucide-react';
 
 export const ProofShowcaseSection: React.FC = () => {
   const { caseStudies, setSelectedProofCaseStudy, setIsBookingModalOpen } = useApp();
 
   return (
-    <section id="proof" className="py-20 sm:py-28 bg-[#090d14] relative">
+    <section id="proof" className="py-20 sm:py-28 bg-[#07080a] relative">
       
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+      {/* Background subtle luxury glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[320px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold tracking-wide uppercase">
-            <ShieldCheck className="w-4 h-4" />
-            Verified Ad Account Performance Proof
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-display">
-            Real Screenshots. Real Spend. Real ROAS.
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 space-y-2">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-syne">
+            Generating $92k in new revenue?{' '}
+            <span className="font-serif italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-amber-200 to-teal-200 block sm:inline">
+              Just another day at the office.
+            </span>
           </h2>
-          <p className="text-slate-400 text-base sm:text-lg">
-            We don't deal in vague marketing promises. Here is unedited, live proof from Meta Ads Manager, TikTok Ads, and Shopify stores we scaled.
+          <p className="text-slate-400 text-xs sm:text-sm">
+            Live, unedited performance screenshots directly from partner client accounts.
           </p>
         </div>
 
-        {/* Proof Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {caseStudies.map((study) => (
+        {/* Minimal Proof Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+          {caseStudies.slice(0, 3).map((study) => (
             <div
               key={study.id}
-              className="bg-[#111722]/90 border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:shadow-emerald-950/20"
+              role="button"
+              tabIndex={0}
+              onClick={() => setSelectedProofCaseStudy(study)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setSelectedProofCaseStudy(study);
+                }
+              }}
+              className="bg-[#0e1117]/90 border border-white/[0.08] rounded-3xl overflow-hidden hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between group cursor-pointer shadow-xl hover:shadow-emerald-950/20 touch-manipulation select-none active:scale-[0.99]"
             >
-              
               {/* Card Screenshot Preview */}
-              <div 
-                onClick={() => setSelectedProofCaseStudy(study)}
-                className="relative h-52 bg-black overflow-hidden cursor-pointer group-hover:opacity-95"
+              <button
+                type="button"
+                aria-label={`View proof for ${study.clientName}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedProofCaseStudy(study);
+                }}
+                className="relative h-48 sm:h-52 w-full bg-black overflow-hidden block text-left focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
               >
                 <img
                   src={study.screenshotUrl}
-                  alt={`${study.clientName} Ad Account Proof`}
+                  alt={`${study.clientName} Proof`}
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#111722] via-transparent to-black/40"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0e1117] via-transparent to-black/30 pointer-events-none"></div>
 
-                {/* Top Badge */}
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/80 backdrop-blur-md border border-white/10 text-xs font-semibold text-white">
-                  {study.industry}
+                {/* ROAS Badge */}
+                <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500 text-black font-extrabold text-xs shadow-md pointer-events-none tracking-wide">
+                  {study.roas.toFixed(2)}x ROAS
                 </div>
 
-                {/* Zoom indicator */}
-                <div className="absolute top-3 right-3 p-2 rounded-lg bg-emerald-500/90 text-black shadow-lg opacity-90 group-hover:opacity-100 transition-opacity">
-                  <Maximize2 className="w-4 h-4" />
+                {/* Zoom Icon */}
+                <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-white opacity-90 group-hover:opacity-100 transition-opacity pointer-events-none flex items-center gap-1.5 text-[10px] font-mono tracking-wider uppercase border border-white/10">
+                  <Maximize2 className="w-3 h-3 text-emerald-400" />
+                  <span>Inspect</span>
                 </div>
+              </button>
 
-                {/* Bottom Overlay Info */}
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-                  <span className="text-sm font-bold text-white drop-shadow-md">
+              {/* Minimal Card Details */}
+              <div className="p-5 space-y-4">
+                <div className="flex items-center justify-between">
+                  <h4 className="text-base font-bold text-white group-hover:text-emerald-300 transition-colors font-syne">
                     {study.clientName}
-                  </span>
-                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-500 text-black font-extrabold text-xs shadow-md">
-                    {study.roas.toFixed(2)}x ROAS
-                  </span>
+                  </h4>
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400">{study.industry}</span>
                 </div>
-              </div>
 
-              {/* Card Content & Metrics */}
-              <div className="p-5 space-y-4 flex-1 flex flex-col justify-between">
-                
-                {/* Metric Strip */}
-                <div className="grid grid-cols-3 gap-2 bg-[#090d14] p-3 rounded-xl border border-slate-800/80 text-center">
+                <div className="flex items-center justify-between text-xs py-2.5 px-3.5 rounded-2xl bg-[#131720] border border-white/[0.06]">
                   <div>
-                    <span className="text-[10px] text-slate-400 uppercase font-medium block">Spend</span>
-                    <span className="text-xs sm:text-sm font-bold text-white">
+                    <span className="text-slate-400 text-[10px] block uppercase font-mono tracking-wider">Ad Spend</span>
+                    <span className="font-bold text-white text-sm">
                       ${study.adSpend.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                     </span>
                   </div>
-                  <div className="border-x border-slate-800">
-                    <span className="text-[10px] text-slate-400 uppercase font-medium block">Purchases</span>
-                    <span className="text-xs sm:text-sm font-bold text-white">
-                      {study.purchases.toLocaleString()}
-                    </span>
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-emerald-400 uppercase font-medium block">Revenue</span>
-                    <span className="text-xs sm:text-sm font-bold text-emerald-400 font-display">
+                  <div className="text-right">
+                    <span className="text-slate-400 text-[10px] block uppercase font-mono tracking-wider">Revenue</span>
+                    <span className="font-bold text-emerald-400 text-sm font-syne">
                       ${study.revenueGenerated.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                     </span>
                   </div>
                 </div>
 
-                {/* Brief Summary */}
-                <div className="space-y-1.5">
-                  <h4 className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
-                    {study.campaignTitle}
-                  </h4>
-                  <p className="text-xs text-slate-400 leading-relaxed line-clamp-3">
-                    {study.resultsSummary}
-                  </p>
-                </div>
-
-                {/* Tags & Action */}
-                <div className="pt-3 border-t border-slate-800 flex items-center justify-between">
-                  <div className="flex flex-wrap gap-1">
-                    {study.tags.slice(0, 2).map((t, idx) => (
-                      <span key={idx} className="px-2 py-0.5 rounded bg-slate-800 text-[10px] text-slate-400">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-
-                  <button
-                    onClick={() => setSelectedProofCaseStudy(study)}
-                    className="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1 transition-colors"
-                  >
-                    <span>View Proof</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedProofCaseStudy(study);
+                  }}
+                  className="w-full pt-1 flex items-center justify-between text-xs text-emerald-300 font-bold uppercase tracking-wider hover:text-emerald-200 transition-colors"
+                >
+                  <span>Inspect Live Audit Data</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </button>
               </div>
 
             </div>
           ))}
         </div>
 
-        {/* Bottom Callout */}
+        {/* Bottom Booking Trigger */}
         <div className="mt-12 text-center">
           <button
             onClick={() => setIsBookingModalOpen(true)}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-emerald-500/40 text-emerald-300 hover:text-white text-sm font-bold transition-all shadow-lg shadow-emerald-950/40"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#11141b] hover:bg-[#161b24] border border-emerald-500/30 text-emerald-300 hover:text-white text-xs sm:text-sm font-bold uppercase tracking-wider transition-all shadow-lg shadow-emerald-950/20"
           >
-            <Calendar className="w-4 h-4" />
-            <span>Ready to see results like these in your ad account? Book a consultation</span>
-            <ArrowRight className="w-4 h-4" />
+            <Calendar className="w-4 h-4 text-emerald-400" />
+            <span>Ready for performance like this? Schedule a Call</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
 

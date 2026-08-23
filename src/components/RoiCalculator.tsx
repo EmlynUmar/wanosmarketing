@@ -15,7 +15,7 @@ export const RoiCalculator: React.FC = () => {
   const { setIsBookingModalOpen } = useApp();
 
   const [monthlyAdSpend, setMonthlyAdSpend] = useState<number>(5000);
-  const [targetRoas, setTargetRoas] = useState<number>(6.5);
+  const [targetRoas, setTargetRoas] = useState<number>(4.2);
   const [currentAov, setCurrentAov] = useState<number>(75);
   const [storeConversionRate, setStoreConversionRate] = useState<number>(2.4);
 
@@ -33,13 +33,13 @@ export const RoiCalculator: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold tracking-wide uppercase">
             <Calculator className="w-3.5 h-3.5" />
-            Interactive Revenue Simulator
+            ROAS Simulator
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-display">
-            Calculate Your Paid Growth & ROAS Upside
+            Calculate Your Revenue at 4.2x ROAS
           </h2>
           <p className="text-slate-400 text-base sm:text-lg">
-            See how scaling with WanosMarketing's media buying frameworks transforms ad spend into predictable monthly gross revenue and cash flow.
+            See how your monthly ad spend scales into top-line revenue based on our 4.2x average ROAS performance.
           </p>
         </div>
 

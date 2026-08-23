@@ -1,126 +1,74 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
-import { 
-  Target, 
-  MailCheck, 
-  LayoutTemplate, 
-  Sparkles, 
-  Cpu, 
-  CheckCircle2, 
-  ArrowRight,
-  TrendingUp,
-  Calendar
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export const ServicesSection: React.FC = () => {
-  const { services, setIsBookingModalOpen } = useApp();
+  const { setIsBookingModalOpen } = useApp();
 
-  const getServiceIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'Target':
-        return <Target className="w-6 h-6 text-emerald-400" />;
-      case 'MailCheck':
-        return <MailCheck className="w-6 h-6 text-emerald-400" />;
-      case 'LayoutTemplate':
-        return <LayoutTemplate className="w-6 h-6 text-emerald-400" />;
-      case 'Sparkles':
-        return <Sparkles className="w-6 h-6 text-emerald-400" />;
-      case 'Cpu':
-        return <Cpu className="w-6 h-6 text-emerald-400" />;
-      default:
-        return <TrendingUp className="w-6 h-6 text-emerald-400" />;
+  const servicesList = [
+    {
+      title: 'Tiktok Ads',
+      desc: "We leverage TikTok's algorithm with proven strategy and execution to drive consistent, scalable growth"
+    },
+    {
+      title: 'Meta Ads',
+      desc: 'We build targeted Meta campaigns using data and proven systems to reach the right audience and drive measurable growth'
+    },
+    {
+      title: 'SMS / Email Marketing',
+      desc: 'We turn email and SMS into predictable revenue channels through strategy, automation, and optimization'
+    },
+    {
+      title: 'Website Development',
+      desc: 'We build high-converting websites using proven systems, data, and UX strategy to turn traffic into revenue'
     }
-  };
+  ];
 
   return (
-    <section id="services" className="py-20 sm:py-28 bg-[#070b10] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="services" className="py-16 sm:py-24 bg-[#07080a] relative">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold tracking-wide uppercase">
-            <Target className="w-4 h-4" />
-            Full-Funnel Customer Acquisition Engine
+        {/* Ultra-Minimal Services Card */}
+        <div className="p-8 sm:p-14 rounded-3xl bg-[#0b0e14] border border-white/[0.08] shadow-2xl text-center space-y-10 sm:space-y-12">
+          
+          <div className="space-y-10 sm:space-y-12">
+            {servicesList.map((service) => (
+              <div key={service.title} className="space-y-2 max-w-lg mx-auto">
+                <h3 className="text-xl sm:text-2xl font-bold text-white font-syne tracking-tight">
+                  {service.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-normal">
+                  {service.desc}
+                </p>
+              </div>
+            ))}
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-display">
-            Engineered For Scale. Optimized For Net Profit.
-          </h2>
-          <p className="text-slate-400 text-base sm:text-lg">
-            We don't just "run ads". We architect the entire customer conversion journey from the first algorithmic impression to high-LTV repeat purchases.
-          </p>
+
+          {/* Centered Pill Action Button */}
+          <div className="pt-2 flex justify-center">
+            <button
+              onClick={() => setIsBookingModalOpen(true)}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 bg-gradient-to-r from-emerald-400 to-emerald-500 hover:from-emerald-300 hover:to-emerald-400 text-black font-extrabold text-xs sm:text-sm uppercase tracking-wider rounded-full transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-emerald-500/20 group"
+            >
+              <span>Book a 30-min call</span>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </button>
+          </div>
+
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => (
-            <div
-              key={service.id}
-              className={`p-6 sm:p-8 rounded-2xl border transition-all flex flex-col justify-between relative group backdrop-blur-md ${
-                service.popular
-                  ? 'bg-gradient-to-b from-[#131d2b] to-[#0d1420] border-emerald-500/40 shadow-xl shadow-emerald-950/30'
-                  : 'bg-[#0f1520]/80 border-slate-800 hover:border-slate-700'
-              }`}
-            >
-              {service.popular && (
-                <div className="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-emerald-500 text-black font-extrabold text-[11px] uppercase tracking-wider shadow-md">
-                  Most Popular
-                </div>
-              )}
-
-              <div className="space-y-5">
-                {/* Service Icon */}
-                <div className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-700/80 flex items-center justify-center group-hover:border-emerald-500/50 group-hover:scale-105 transition-all">
-                  {getServiceIcon(service.icon)}
-                </div>
-
-                {/* Title & Short Description */}
-                <div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-emerald-300 transition-colors font-display">
-                    {service.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-400 mt-2 leading-relaxed">
-                    {service.shortDesc}
-                  </p>
-                </div>
-
-                {/* Metric Badge */}
-                <div className="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-xs font-semibold text-emerald-400 flex items-center gap-2">
-                  <TrendingUp className="w-3.5 h-3.5 shrink-0" />
-                  <span>{service.metrics}</span>
-                </div>
-
-                {/* Deliverables Checklist */}
-                <div className="space-y-2 pt-2 border-t border-slate-800/80">
-                  <span className="text-[11px] uppercase tracking-wider font-bold text-slate-400">
-                    What's Included:
-                  </span>
-                  <ul className="space-y-2">
-                    {service.deliverables.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-xs text-slate-300">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-                        <span className="leading-snug">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Action Button */}
-              <div className="pt-6 mt-6 border-t border-slate-800/80">
-                <button
-                  onClick={() => setIsBookingModalOpen(true)}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-emerald-500 hover:text-black text-slate-300 text-xs font-bold border border-slate-700/80 hover:border-emerald-500 transition-all"
-                >
-                  <Calendar className="w-3.5 h-3.5" />
-                  <span>Inquire for {service.title.split(' ')[0]}</span>
-                </button>
-              </div>
-
-            </div>
-          ))}
+        {/* Minimal Transition Anchor directly following */}
+        <div className="text-center mt-16 sm:mt-24 space-y-3 max-w-xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-syne">
+            Predictable, scalable growth
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            We build the strategy, frontend, and backend systems your brand needs to scale driving measurable growth, efficiency, and higher returns
+          </p>
         </div>
 
       </div>
     </section>
   );
 };
+
