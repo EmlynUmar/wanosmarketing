@@ -17,7 +17,14 @@ export const Footer: React.FC = () => {
           <div className="flex items-center gap-6 text-xs uppercase tracking-wider font-semibold">
             <a href="#services" className="text-zinc-400 hover:text-white transition-colors">Services</a>
             <a href="#proof" className="text-zinc-400 hover:text-white transition-colors">Results</a>
-            <a href="#book" className="text-zinc-400 hover:text-white transition-colors">Contact</a>
+            <a 
+              href="https://www.instagram.com/mohammad_dankwano?igsi=MWRicXIyMTBrYWJwOA==" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-zinc-400 hover:text-white transition-colors"
+            >
+              Contact
+            </a>
           </div>
         </div>
 

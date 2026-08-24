@@ -9,11 +9,11 @@ export const CtaSection: React.FC = () => {
     <section id="book" className="py-20 sm:py-28 bg-black relative">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
         <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
-          Ready to scale with predictable returns?
+          Ready to take your brand to the next level?
         </h2>
 
-        <p className="text-zinc-400 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
-          Book a strategy session to audit your ad account and growth roadmap.
+        <p className="text-zinc-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          We don’t just run your ads. We build the system that scales your brand from offer strategy and high-converting websites to email, SMS, and customer value optimization.
         </p>
 
         <div className="pt-2 flex justify-center">
