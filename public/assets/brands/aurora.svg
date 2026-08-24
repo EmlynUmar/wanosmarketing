@@ -1,0 +1,8 @@
+<svg viewBox="0 0 320 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-family="'Cinzel', 'Cinzel Decorative', 'Trajan Pro', 'Georgia', serif" font-weight="900" font-size="46" letter-spacing="0.22em">
+    AURORA
+  </text>
+  <!-- Distressed grunge lines over text -->
+  <path d="M 20 60 Q 160 30 300 60" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="4,8" opacity="0.8"/>
+  <path d="M 25 64 Q 160 35 295 64" stroke="#000000" stroke-width="1" stroke-dasharray="2,6"/>
+</svg>

@@ -12,9 +12,10 @@ import {
   Calendar,
   CheckCircle2
 } from 'lucide-react';
+import { MetaAdsCampaignTable } from './MetaAdsCampaignTable';
 
 export const ProofModal: React.FC = () => {
-  const { selectedProofCaseStudy, setSelectedProofCaseStudy, setIsBookingModalOpen } = useApp();
+  const { selectedProofCaseStudy, setSelectedProofCaseStudy, agencySettings } = useApp();
   const [isZoomed, setIsZoomed] = useState(false);
 
   // Lock body scroll when modal is active on mobile & desktop
@@ -53,15 +54,15 @@ export const ProofModal: React.FC = () => {
             </div>
             <div>
               <div className="flex items-center gap-2 flex-wrap">
-                <h3 className="text-base sm:text-lg font-bold text-white font-syne">
-                  {study.clientName}
+                <h3 className="text-base sm:text-lg font-bold text-white">
+                  Verified Campaign Audit
                 </h3>
-                <span className="px-2.5 py-0.5 text-[10px] font-extrabold rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500 text-black uppercase tracking-wider font-mono">
+                <span className="px-2.5 py-0.5 text-[10px] font-semibold rounded-full bg-white/10 text-white uppercase tracking-wider">
                   {study.roas.toFixed(2)}x ROAS
                 </span>
               </div>
-              <p className="text-[11px] font-mono uppercase tracking-wider text-slate-400">
-                {study.industry} • Live Verified Ads Manager Audit
+              <p className="text-[11px] uppercase tracking-wider text-zinc-400">
+                Ad Manager Authenticated Proof
               </p>
             </div>
           </div>
@@ -143,16 +144,17 @@ export const ProofModal: React.FC = () => {
               role="button"
               tabIndex={0}
               onClick={() => setIsZoomed(!isZoomed)}
-              className={`relative rounded-2xl border border-white/[0.08] bg-black overflow-x-auto overflow-y-hidden cursor-zoom-in transition-all touch-manipulation select-none ${
-                isZoomed ? 'max-h-none' : 'max-h-[380px] sm:max-h-[440px]'
+              className={`relative rounded-2xl border border-white/[0.12] bg-white overflow-hidden shadow-2xl cursor-zoom-in transition-all touch-manipulation select-none ${
+                isZoomed ? 'max-h-none' : 'max-h-[420px] sm:max-h-[520px]'
               }`}
             >
               <img
                 src={study.screenshotUrl}
-                alt={`${study.clientName} campaign proof`}
-                className={`w-full object-contain mx-auto transition-transform duration-300 ${
-                  isZoomed ? 'scale-125 sm:scale-135 my-8 origin-top' : 'scale-100'
+                alt={`${study.clientName} verified Meta Ads proof`}
+                className={`w-full h-auto object-contain mx-auto transition-transform duration-300 ${
+                  isZoomed ? 'scale-125 sm:scale-135 my-4 origin-top' : 'scale-100'
                 }`}
+                loading="eager"
               />
               <div className="absolute bottom-3 right-3 px-3 py-1 bg-black/85 backdrop-blur-md rounded-full text-[10px] font-mono uppercase tracking-wider text-slate-300 border border-white/10 pointer-events-none">
                 Live Screenshot
@@ -197,17 +199,16 @@ export const ProofModal: React.FC = () => {
             >
               Close
             </button>
-            <button
-              type="button"
-              onClick={() => {
-                setSelectedProofCaseStudy(null);
-                setIsBookingModalOpen(true);
-              }}
+            <a
+              href={agencySettings.bookingUrl || 'https://calendly.com/wanosmarketing01/work-with-wanos-to-scale-your-brand'}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setSelectedProofCaseStudy(null)}
               className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-2.5 bg-gradient-to-r from-emerald-400 to-emerald-500 hover:from-emerald-300 hover:to-emerald-400 text-black font-extrabold text-xs uppercase tracking-wider rounded-full transition-transform active:scale-95 shadow-lg shadow-emerald-500/20 touch-manipulation"
             >
               <Calendar className="w-3.5 h-3.5" />
               <span>Schedule Strategy Call</span>
-            </button>
+            </a>
           </div>
         </div>
 

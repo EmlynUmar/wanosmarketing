@@ -1,0 +1,30 @@
+<svg viewBox="0 0 280 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Top slogan -->
+  <text x="24" y="24" fill="#FFFFFF" font-family="'Inter', 'Arial Black', sans-serif" font-weight="800" font-size="13" letter-spacing="0.12em">
+    ASPIRE TO INSPIRE
+  </text>
+  
+  <!-- Architectural frame line -->
+  <path d="M 24 38 L 220 38 L 220 120" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square"/>
+  
+  <!-- Red horizontal line cutting through letters -->
+  <rect x="20" y="78" width="230" height="12" fill="#D32F2F"/>
+  
+  <!-- Main bold RZLNT typography -->
+  <g fill="#FFFFFF">
+    <!-- R -->
+    <path d="M 24 50 H 52 C 64 50 72 56 72 66 C 72 74 66 80 56 82 L 74 120 H 56 L 42 86 H 38 V 120 H 24 V 50 Z M 38 62 V 74 H 50 C 56 74 60 71 60 68 C 60 65 56 62 50 62 H 38 Z"/>
+    <!-- Z -->
+    <path d="M 80 50 H 122 V 64 L 98 106 H 124 V 120 H 80 V 106 L 104 64 H 80 V 50 Z"/>
+    <!-- L with building pattern -->
+    <path d="M 132 50 H 146 V 106 H 168 V 120 H 132 V 50 Z"/>
+    <!-- N -->
+    <path d="M 176 50 H 190 L 210 98 V 50 H 224 V 120 H 210 L 190 72 V 120 H 176 V 50 Z"/>
+  </g>
+  
+  <!-- Red 12-point burst over the right post -->
+  <g transform="translate(220, 20)">
+    <polygon points="0,-10 3,-3 10,0 3,3 0,10 -3,3 -10,0 -3,-3" fill="#D32F2F"/>
+    <polygon points="0,-8 2,-2 8,0 2,2 0,8 -2,2 -8,0 -2,-2" fill="#FF5252" transform="rotate(45)"/>
+  </g>
+</svg>

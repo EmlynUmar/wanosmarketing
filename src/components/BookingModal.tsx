@@ -189,10 +189,10 @@ export const BookingModal: React.FC = () => {
                 <button
                   type="submit"
                   disabled={!formData.name.trim() || !formData.email.trim()}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 px-6 bg-gradient-to-r from-emerald-400 to-emerald-500 hover:from-emerald-300 hover:to-emerald-400 disabled:opacity-50 text-black font-extrabold text-xs uppercase tracking-wider rounded-full transition-all shadow-lg shadow-emerald-500/20 group"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 px-6 bg-[#E55353] hover:bg-[#D94747] disabled:opacity-50 text-white font-semibold text-xs uppercase tracking-wider rounded-full transition-all shadow-lg shadow-red-950/30 group"
                 >
                   <CalendarIcon className="w-4 h-4" />
-                  <span>Confirm Strategy Call</span>
+                  <span>Book a call</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </button>
               </div>

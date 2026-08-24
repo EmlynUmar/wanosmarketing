@@ -1,6 +1,6 @@
 {
   "name": "WanosMarketing Growth Platform",
-  "description": "Premium marketing website and custom admin dashboard for WanosMarketing digital growth agency with real-time performance analytics, case studies, ROAS proofs, and strategy call booking engine.",
+  "description": "High-converting digital growth agency platform for WanosMarketing featuring verified case studies, interactive ROAS analytics, client testimonials, and strategy call booking.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

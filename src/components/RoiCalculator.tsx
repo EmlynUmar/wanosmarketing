@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 
 export const RoiCalculator: React.FC = () => {
-  const { setIsBookingModalOpen } = useApp();
+  const { agencySettings } = useApp();
 
   const [monthlyAdSpend, setMonthlyAdSpend] = useState<number>(5000);
   const [targetRoas, setTargetRoas] = useState<number>(4.2);
@@ -218,14 +218,16 @@ export const RoiCalculator: React.FC = () => {
 
             {/* CTA Button */}
             <div className="pt-6 mt-6 border-t border-slate-800/80 relative z-10">
-              <button
-                onClick={() => setIsBookingModalOpen(true)}
+              <a
+                href={agencySettings.bookingUrl || 'https://calendly.com/wanosmarketing01/work-with-wanos-to-scale-your-brand'}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm transition-all transform hover:scale-[1.01] active:scale-[0.98] shadow-lg shadow-emerald-500/25"
               >
                 <Calendar className="w-4 h-4" />
                 <span>Unlock This Growth Model For Your Brand</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
 
           </div>

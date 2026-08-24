@@ -36,6 +36,7 @@ export interface Testimonial {
   company: string;
   position: string;
   avatarUrl: string;
+  logoSvg?: string;
   rating: number;
   message: string;
   verified: boolean;

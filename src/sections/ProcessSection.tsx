@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 
 export const ProcessSection: React.FC = () => {
-  const { setIsBookingModalOpen } = useApp();
+  const { agencySettings } = useApp();
 
   const steps = [
     {
@@ -77,14 +77,16 @@ export const ProcessSection: React.FC = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <button
-            onClick={() => setIsBookingModalOpen(true)}
+          <a
+            href={agencySettings.bookingUrl || 'https://calendly.com/wanosmarketing01/work-with-wanos-to-scale-your-brand'}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm transition-all shadow-lg shadow-emerald-500/20"
           >
             <Calendar className="w-4 h-4" />
             <span>Book Your Strategy Call</span>
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </a>
         </div>
 
       </div>

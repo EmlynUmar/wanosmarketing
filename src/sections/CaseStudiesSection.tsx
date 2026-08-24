@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 export const CaseStudiesSection: React.FC = () => {
-  const { caseStudies, setSelectedProofCaseStudy, setIsBookingModalOpen } = useApp();
+  const { caseStudies, setSelectedProofCaseStudy } = useApp();
   const [selectedIndustry, setSelectedIndustry] = useState<string>('All');
 
   const industries = ['All', ...Array.from(new Set(caseStudies.map(c => c.industry.split(' ')[0])))];

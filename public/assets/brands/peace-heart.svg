@@ -1,0 +1,37 @@
+<svg viewBox="0 0 300 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Official Peace & Heart brand mark: Distressed/Classic Heart containing Peace Symbol matching IMG-20260823-WA0001.jpg -->
+  <defs>
+    <!-- Grunge / distress texture mask -->
+    <filter id="ph_distress" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="3" result="noise"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="hardNoise"/>
+      <feComposite in="SourceGraphic" in2="hardNoise" operator="in"/>
+    </filter>
+  </defs>
+
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Heart Base (White Fill) -->
+    <path
+      d="M 150 82 
+         C 150 48, 122 18, 82 18 
+         C 42 18, 12 48, 12 90 
+         C 12 144, 76 194, 150 252 
+         C 224 194, 288 144, 288 90 
+         C 288 48, 258 18, 218 18 
+         C 178 18, 150 48, 150 82 Z"
+      fill="#FFFFFF"
+    />
+
+    <!-- Black Distressed Peace Symbol Cutout inside the Heart matching artwork -->
+    <g transform="translate(150, 142)">
+      <!-- Outer Ring -->
+      <circle cx="0" cy="0" r="54" stroke="#000000" stroke-width="12" fill="none" />
+      <!-- Vertical Diameter Spoke -->
+      <line x1="0" y1="-54" x2="0" y2="54" stroke="#000000" stroke-width="12" />
+      <!-- Left Diagonal Spoke -->
+      <line x1="0" y1="0" x2="-38" y2="38" stroke="#000000" stroke-width="12" />
+      <!-- Right Diagonal Spoke -->
+      <line x1="0" y1="0" x2="38" y2="38" stroke="#000000" stroke-width="12" />
+    </g>
+  </g>
+</svg>

@@ -71,9 +71,6 @@ export const Logo: React.FC<LogoProps> = ({
               </span>
             )}
           </div>
-          <span className={`${selectedSize.sub} text-slate-400 font-mono tracking-wider uppercase`}>
-            Growth & Performance
-          </span>
         </div>
       )}
     </div>

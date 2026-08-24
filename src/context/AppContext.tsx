@@ -38,10 +38,6 @@ interface AppContextType {
   mediaAssets: MediaAsset[];
   
   // Navigation & UI state
-  isAdmin: boolean;
-  setIsAdmin: (value: boolean) => void;
-  activeAdminTab: string;
-  setActiveAdminTab: (tab: string) => void;
   isBookingModalOpen: boolean;
   setIsBookingModalOpen: (open: boolean) => void;
   selectedProofCaseStudy: CaseStudy | null;
@@ -81,31 +77,82 @@ interface AppContextType {
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
+const DATA_VERSION = 'v18.0';
+
+export const CALENDLY_BOOKING_URL = 'https://calendly.com/wanosmarketing01/work-with-wanos-to-scale-your-brand';
+
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // Check version to invalidate stale cached data
+  useEffect(() => {
+    const currentVersion = localStorage.getItem('wanos_app_version');
+    if (currentVersion !== DATA_VERSION) {
+      localStorage.setItem('wanos_app_version', DATA_VERSION);
+      localStorage.setItem('wanos_case_studies', JSON.stringify(initialCaseStudies));
+      localStorage.setItem('wanos_testimonials', JSON.stringify(initialTestimonials));
+      localStorage.setItem('wanos_statistics', JSON.stringify(initialStatistics));
+      localStorage.setItem('wanos_services', JSON.stringify(initialServices));
+      localStorage.setItem('wanos_brands', JSON.stringify(initialBrands));
+      localStorage.setItem('wanos_settings', JSON.stringify(initialAgencySettings));
+      setCaseStudies(initialCaseStudies);
+      setTestimonials(initialTestimonials);
+      setBrands(initialBrands);
+      setServices(initialServices);
+      setStatistics(initialStatistics);
+      setAgencySettings(initialAgencySettings);
+    }
+  }, []);
+
   // Load from localStorage or defaults
   const [statistics, setStatistics] = useState<StatisticItem[]>(() => {
     const saved = localStorage.getItem('wanos_statistics');
-    return saved ? JSON.parse(saved) : initialStatistics;
+    const version = localStorage.getItem('wanos_app_version');
+    return saved && version === DATA_VERSION ? JSON.parse(saved) : initialStatistics;
   });
 
   const [caseStudies, setCaseStudies] = useState<CaseStudy[]>(() => {
     const saved = localStorage.getItem('wanos_case_studies');
-    return saved ? JSON.parse(saved) : initialCaseStudies;
+    const version = localStorage.getItem('wanos_app_version');
+    if (saved && version === DATA_VERSION) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (parsed.some((p: CaseStudy) => p.clientName.includes('Aura') || p.clientName.includes('GlowBotanica') || p.clientName.includes('NutriCore') || p.clientName.includes('VoltEdge'))) {
+          return initialCaseStudies;
+        }
+        return parsed;
+      } catch {
+        return initialCaseStudies;
+      }
+    }
+    return initialCaseStudies;
   });
 
   const [testimonials, setTestimonials] = useState<Testimonial[]>(() => {
     const saved = localStorage.getItem('wanos_testimonials');
-    return saved ? JSON.parse(saved) : initialTestimonials;
+    const version = localStorage.getItem('wanos_app_version');
+    return saved && version === DATA_VERSION ? JSON.parse(saved) : initialTestimonials;
   });
 
   const [services, setServices] = useState<Service[]>(() => {
     const saved = localStorage.getItem('wanos_services');
-    return saved ? JSON.parse(saved) : initialServices;
+    const version = localStorage.getItem('wanos_app_version');
+    return saved && version === DATA_VERSION ? JSON.parse(saved) : initialServices;
   });
 
   const [brands, setBrands] = useState<ClientBrand[]>(() => {
     const saved = localStorage.getItem('wanos_brands');
-    return saved ? JSON.parse(saved) : initialBrands;
+    const version = localStorage.getItem('wanos_app_version');
+    if (saved && version === DATA_VERSION) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (parsed.some((b: ClientBrand) => b.name.includes('Aura') || b.name.includes('GlowBotanica') || b.name.includes('NutriCore') || b.name.includes('VoltEdge'))) {
+          return initialBrands;
+        }
+        return parsed;
+      } catch {
+        return initialBrands;
+      }
+    }
+    return initialBrands;
   });
 
   const [leads, setLeads] = useState<LeadSubmission[]>(() => {
@@ -124,11 +171,19 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   });
 
   // UI state
-  const [isAdmin, setIsAdmin] = useState<boolean>(false);
-  const [activeAdminTab, setActiveAdminTab] = useState<string>('overview');
-  const [isBookingModalOpen, setIsBookingModalOpen] = useState<boolean>(false);
+  const [isBookingModalOpen, setIsBookingModalOpenState] = useState<boolean>(false);
   const [selectedProofCaseStudy, setSelectedProofCaseStudy] = useState<CaseStudy | null>(null);
   const [toasts, setToasts] = useState<Toast[]>([]);
+
+  const handleSetIsBookingModalOpen = (open: boolean) => {
+    if (open) {
+      const url = agencySettings?.bookingUrl || CALENDLY_BOOKING_URL;
+      window.open(url, '_blank', 'noopener,noreferrer');
+      setIsBookingModalOpenState(false);
+      return;
+    }
+    setIsBookingModalOpenState(open);
+  };
 
   // Sync to localStorage
   useEffect(() => {
@@ -333,12 +388,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         leads,
         agencySettings,
         mediaAssets,
-        isAdmin,
-        setIsAdmin,
-        activeAdminTab,
-        setActiveAdminTab,
         isBookingModalOpen,
-        setIsBookingModalOpen,
+        setIsBookingModalOpen: handleSetIsBookingModalOpen,
         selectedProofCaseStudy,
         setSelectedProofCaseStudy,
         toasts,

@@ -5,12 +5,11 @@ import {
   Calendar, 
   Menu, 
   X, 
-  ArrowRight,
-  LayoutDashboard
+  ArrowRight
 } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
-  const { agencySettings, setIsBookingModalOpen, isAdmin, setIsAdmin } = useApp();
+  const { agencySettings } = useApp();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -42,42 +41,21 @@ export const Navbar: React.FC = () => {
             ))}
           </nav>
 
-          {/* Right Action CTA & Admin Portal Toggle */}
+          {/* Right Action CTA */}
           <div className="hidden sm:flex items-center gap-3">
-            <button
-              onClick={() => setIsAdmin(!isAdmin)}
-              className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold border transition-all ${
-                isAdmin
-                  ? 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30 shadow-sm'
-                  : 'bg-[#11141b]/90 text-slate-400 border-white/[0.08] hover:border-white/20 hover:text-white'
-              }`}
-              title="Toggle Custom Admin Dashboard & CMS"
+            <a
+              href={agencySettings.bookingUrl || 'https://calendly.com/wanosmarketing01/work-with-wanos-to-scale-your-brand'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#E55353] hover:bg-[#D94747] text-white text-xs font-semibold tracking-wide transition-all shadow-lg shadow-red-950/30 hover:scale-[1.02] active:scale-[0.98]"
             >
-              <LayoutDashboard className="w-3.5 h-3.5 text-emerald-400" />
-              <span>{isAdmin ? 'Exit Admin' : 'Admin'}</span>
-            </button>
-
-            <button
-              onClick={() => setIsBookingModalOpen(true)}
-              className="relative group overflow-hidden rounded-full p-[1px] font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
-            >
-              <span className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-amber-200/80 to-emerald-400 opacity-90 group-hover:opacity-100 transition-opacity"></span>
-              <span className="relative flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#090b10] text-white text-xs font-bold uppercase tracking-wider transition-colors group-hover:bg-transparent group-hover:text-black">
-                <Calendar className="w-3.5 h-3.5 text-emerald-400 group-hover:text-black" />
-                <span>Book Strategy Call</span>
-                <ArrowRight className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 transition-transform" />
-              </span>
-            </button>
+              <span>Book a call</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
           </div>
 
           {/* Mobile hamburger */}
           <div className="flex sm:hidden items-center gap-2">
-            <button
-              onClick={() => setIsAdmin(!isAdmin)}
-              className="px-2.5 py-1.5 rounded-lg bg-[#11141b] border border-white/[0.08] text-xs text-slate-300 font-medium"
-            >
-              {isAdmin ? 'Site' : 'Admin'}
-            </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg bg-[#11141b] border border-white/[0.08] text-slate-300 hover:text-white"
@@ -106,16 +84,16 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div className="pt-3 border-t border-white/[0.08] flex flex-col gap-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                setIsBookingModalOpen(true);
-              }}
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500 text-black font-extrabold text-xs uppercase tracking-wider shadow-lg shadow-emerald-500/20"
+            <a
+              href={agencySettings.bookingUrl || 'https://calendly.com/wanosmarketing01/work-with-wanos-to-scale-your-brand'}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#E55353] hover:bg-[#D94747] text-white font-semibold text-xs tracking-wide shadow-lg shadow-red-950/30"
             >
               <Calendar className="w-4 h-4" />
-              Book Strategy Call
-            </button>
+              <span>Book a call</span>
+            </a>
           </div>
         </div>
       )}

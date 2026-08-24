@@ -1,0 +1,16 @@
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle border -->
+  <circle cx="100" cy="100" r="92" stroke="#FFFFFF" stroke-width="9" fill="none"/>
+  
+  <!-- Left diagonal bold N stroke and vertical line -->
+  <path d="M 54 22 L 54 178" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/>
+  <path d="M 54 26 L 102 188 L 102 12" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="miter"/>
+  <path d="M 102 12 L 102 188" stroke="#FFFFFF" stroke-width="6"/>
+
+  <!-- Vertical text "ociety" on the right side -->
+  <g transform="translate(136, 100) rotate(90)">
+    <text x="0" y="6" text-anchor="middle" fill="#FFFFFF" font-family="'Didot', 'Bodoni MT', 'Times New Roman', serif" font-size="34" font-weight="600" letter-spacing="0.05em">
+      ociety
+    </text>
+  </g>
+</svg>

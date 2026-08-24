@@ -83,13 +83,15 @@ export const FaqSection: React.FC = () => {
             </p>
           </div>
 
-          <button
-            onClick={() => setIsBookingModalOpen(true)}
+          <a
+            href={agencySettings.bookingUrl || 'https://calendly.com/wanosmarketing01/work-with-wanos-to-scale-your-brand'}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs rounded-xl transition-all shrink-0 flex items-center gap-1.5"
           >
             <Calendar className="w-3.5 h-3.5" />
             <span>Book Strategy Call</span>
-          </button>
+          </a>
         </div>
 
       </div>

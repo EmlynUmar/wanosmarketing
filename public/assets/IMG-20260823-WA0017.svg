@@ -1,0 +1,169 @@
+<svg viewBox="0 0 1100 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clean Meta Ads Dashboard Table Style -->
+  <rect width="1100" height="600" rx="12" fill="#FFFFFF" />
+  
+  <!-- Header Row Background -->
+  <rect x="0" y="0" width="1100" height="64" fill="#FFFFFF" rx="12" />
+  <line x1="0" y1="64" x2="1100" y2="64" stroke="#E2E8F0" stroke-width="1.5" />
+
+  <!-- Column Dividers for Header -->
+  <line x1="170" y1="0" x2="170" y2="600" stroke="#EAECEF" stroke-width="1" />
+  <line x1="350" y1="0" x2="350" y2="600" stroke="#EAECEF" stroke-width="1" />
+  <line x1="530" y1="0" x2="530" y2="600" stroke="#EAECEF" stroke-width="1" />
+  <line x1="710" y1="0" x2="710" y2="600" stroke="#EAECEF" stroke-width="1" />
+  <line x1="890" y1="0" x2="890" y2="600" stroke="#EAECEF" stroke-width="1" />
+
+  <!-- Column 1 Header: Adds to cart -->
+  <text x="24" y="32" fill="#1E293B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="15">Adds to</text>
+  <text x="24" y="50" fill="#1E293B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="15">cart</text>
+  <path d="M 125 32 L 125 44 M 121 36 L 125 32 L 129 36 M 135 32 L 135 44 M 131 40 L 135 44 L 139 40 M 145 35 L 151 35 L 148 40 Z" fill="#64748B" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Column 2 Header: Cost per purchase -->
+  <text x="188" y="32" fill="#1E293B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="15">Cost per</text>
+  <text x="188" y="50" fill="#1E293B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="15">purchase</text>
+  <path d="M 305 32 L 305 44 M 301 36 L 305 32 L 309 36 M 315 32 L 315 44 M 311 40 L 315 44 L 319 40 M 325 35 L 331 35 L 328 40 Z" fill="#64748B" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Column 3 Header: Amount spent -->
+  <text x="368" y="32" fill="#1E293B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="15">Amount</text>
+  <text x="368" y="50" fill="#1E293B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="15">spent</text>
+  <path d="M 485 32 L 485 44 M 481 36 L 485 32 L 489 36 M 495 32 L 495 44 M 491 40 L 495 44 L 499 40 M 505 35 L 511 35 L 508 40 Z" fill="#64748B" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Column 4 Header: Purchases -->
+  <text x="548" y="42" fill="#1E293B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="15">Purchases</text>
+  <path d="M 645 32 L 645 44 M 641 36 L 645 32 L 649 36 M 655 32 L 655 44 M 651 40 L 655 44 L 659 40 M 665 35 L 671 35 L 668 40 Z" fill="#64748B" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Column 5 Header: Purchase ROAS... -->
+  <text x="728" y="32" fill="#1E293B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="15">Purchase</text>
+  <text x="728" y="50" fill="#1E293B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="15">ROAS...</text>
+  <path d="M 835 32 L 835 44 M 831 36 L 835 32 L 839 36 M 845 32 L 845 44 M 841 40 L 845 44 L 849 40 M 855 35 L 861 35 L 858 40 Z" fill="#64748B" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Column 6 Header: Purchases conversion... -->
+  <text x="908" y="32" fill="#0284C7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="15">Purchases</text>
+  <text x="908" y="50" fill="#0284C7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="15">conversion...</text>
+  <path d="M 1060 38 L 1060 48 M 1056 44 L 1060 48 L 1064 44" fill="none" stroke="#0284C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- DATA ROWS -->
+  <!-- Row 1 -->
+  <rect x="0" y="64" width="1100" height="56" fill="#F8FAFC" opacity="0.4"/>
+  <line x1="0" y1="120" x2="1100" y2="120" stroke="#F1F5F9" stroke-width="1" />
+  <text x="150" y="98" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">60,416</text>
+  <line x1="108" y1="102" x2="150" y2="102" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="330" y="98" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$27.16</text>
+  <text x="510" y="98" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$134,818.43</text>
+  <text x="690" y="98" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">4,963</text>
+  <line x1="652" y1="102" x2="690" y2="102" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="870" y="98" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">2.80</text>
+  <text x="1075" y="98" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$377,604.35</text>
+
+  <!-- Row 2 -->
+  <rect x="0" y="120" width="1100" height="56" fill="#FFFFFF" />
+  <line x1="0" y1="176" x2="1100" y2="176" stroke="#F1F5F9" stroke-width="1" />
+  <text x="150" y="154" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">5,885</text>
+  <line x1="115" y1="158" x2="150" y2="158" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="330" y="154" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$20.86</text>
+  <text x="510" y="154" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$7,299.86</text>
+  <text x="690" y="154" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">350</text>
+  <line x1="662" y1="158" x2="690" y2="158" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="870" y="154" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">3.87</text>
+  <text x="1075" y="154" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$28,245.54</text>
+
+  <!-- Row 3 -->
+  <rect x="0" y="176" width="1100" height="56" fill="#F8FAFC" opacity="0.4"/>
+  <line x1="0" y1="232" x2="1100" y2="232" stroke="#F1F5F9" stroke-width="1" />
+  <text x="150" y="210" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">2,210</text>
+  <line x1="115" y1="214" x2="150" y2="214" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="330" y="210" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$42.62</text>
+  <text x="510" y="210" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$6,520.57</text>
+  <text x="690" y="210" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">153</text>
+  <line x1="662" y1="214" x2="690" y2="214" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="870" y="210" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">2.72</text>
+  <text x="1075" y="210" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$17,734.89</text>
+
+  <!-- Row 4 (Highlighted in Subtle Green tint matching screenshot) -->
+  <rect x="0" y="232" width="1100" height="56" fill="#F0FDF4" />
+  <line x1="0" y1="288" x2="1100" y2="288" stroke="#E2E8F0" stroke-width="1" />
+  <text x="150" y="266" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">2,008</text>
+  <line x1="115" y1="270" x2="150" y2="270" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="330" y="266" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$24.00</text>
+  <text x="510" y="266" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$2,856.07</text>
+  <text x="690" y="266" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">119</text>
+  <line x1="662" y1="270" x2="690" y2="270" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="870" y="266" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">3.31</text>
+  <text x="1075" y="266" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$9,450.88</text>
+
+  <!-- Row 5 -->
+  <rect x="0" y="288" width="1100" height="52" fill="#FFFFFF" />
+  <line x1="0" y1="340" x2="1100" y2="340" stroke="#F1F5F9" stroke-width="1" />
+  <text x="150" y="320" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">827</text>
+  <line x1="125" y1="324" x2="150" y2="324" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="330" y="320" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$37.64</text>
+  <text x="510" y="320" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$4,065.00</text>
+  <text x="690" y="320" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">108</text>
+  <line x1="662" y1="324" x2="690" y2="324" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="870" y="320" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">1.78</text>
+  <text x="1075" y="320" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$7,250.47</text>
+
+  <!-- Row 6 -->
+  <rect x="0" y="340" width="1100" height="52" fill="#F8FAFC" opacity="0.4"/>
+  <line x1="0" y1="392" x2="1100" y2="392" stroke="#F1F5F9" stroke-width="1" />
+  <text x="150" y="372" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">919</text>
+  <line x1="125" y1="376" x2="150" y2="376" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="330" y="372" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$19.87</text>
+  <text x="510" y="372" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$3,457.06</text>
+  <text x="690" y="372" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">174</text>
+  <line x1="662" y1="376" x2="690" y2="376" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="870" y="372" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">1.95</text>
+  <text x="1075" y="372" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$6,735.74</text>
+
+  <!-- Row 7 -->
+  <rect x="0" y="392" width="1100" height="52" fill="#FFFFFF"/>
+  <line x1="0" y1="444" x2="1100" y2="444" stroke="#F1F5F9" stroke-width="1" />
+  <text x="150" y="424" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">468</text>
+  <line x1="125" y1="428" x2="150" y2="428" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="330" y="424" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$46.28</text>
+  <text x="510" y="424" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$1,943.83</text>
+  <text x="690" y="424" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">42</text>
+  <line x1="670" y1="428" x2="690" y2="428" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="870" y="424" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">3.03</text>
+  <text x="1075" y="424" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$5,888.30</text>
+
+  <!-- Row 8 -->
+  <rect x="0" y="444" width="1100" height="52" fill="#F8FAFC" opacity="0.4"/>
+  <line x1="0" y1="496" x2="1100" y2="496" stroke="#F1F5F9" stroke-width="1" />
+  <text x="150" y="476" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">354</text>
+  <line x1="125" y1="480" x2="150" y2="480" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="330" y="476" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$48.34</text>
+  <text x="510" y="476" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$1,595.37</text>
+  <text x="690" y="476" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">33</text>
+  <line x1="670" y1="480" x2="690" y2="480" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="870" y="476" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">2.85</text>
+  <text x="1075" y="476" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="15">$4,544.27</text>
+
+  <!-- TOTAL SUMMARY ROW (Bottom of Table) -->
+  <rect x="0" y="496" width="1100" height="104" fill="#FFFFFF" rx="12" />
+  <line x1="0" y1="496" x2="1100" y2="496" stroke="#CBD5E1" stroke-width="1.5" />
+  
+  <!-- Total Column 1: 87,232 Total -->
+  <text x="150" y="534" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="16">87,232</text>
+  <text x="150" y="556" text-anchor="end" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="13">Total</text>
+
+  <!-- Total Column 2: $30.01 Per Action -->
+  <text x="330" y="534" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="16">$30.01</text>
+  <text x="330" y="556" text-anchor="end" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="13">Per Action</text>
+
+  <!-- Total Column 3: $202,585.47 Total Spent -->
+  <text x="510" y="534" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="16">$202,585.47</text>
+  <text x="510" y="556" text-anchor="end" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="13">Total Spent</text>
+
+  <!-- Total Column 4: 6,750 Total -->
+  <text x="690" y="534" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="16">6,750</text>
+  <text x="690" y="556" text-anchor="end" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="13">Total</text>
+
+  <!-- Total Column 5: 2.69 Average -->
+  <text x="870" y="534" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="17">2.69</text>
+  <text x="870" y="556" text-anchor="end" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="13">Average</text>
+
+  <!-- Total Column 6: $544,480.68 Total -->
+  <text x="1075" y="534" text-anchor="end" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="18">$544,480.68</text>
+  <text x="1075" y="556" text-anchor="end" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="13">Total</text>
+</svg>
