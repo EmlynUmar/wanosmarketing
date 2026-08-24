@@ -135,12 +135,13 @@ export const ServicesSection: React.FC = () => {
         </div>
 
         {/* Minimal Transition Anchor directly following */}
-        <div className="text-center mt-16 sm:mt-24 space-y-3 max-w-xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-            Predictable, scalable growth
+        <div className="text-center mt-16 sm:mt-24 space-y-4 max-w-2xl mx-auto">
+          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]">
+            Predictable, scalable <br />
+            growth.
           </h2>
-          <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-            We build the strategy, frontend, and backend systems your brand needs to scale driving measurable growth, efficiency, and higher returns
+          <p className="text-sm sm:text-base text-zinc-400 leading-relaxed max-w-xl mx-auto">
+            We build the strategy, frontend, and backend systems your brand needs to scale, driving measurable growth, efficiency, and higher returns.
           </p>
         </div>
 
