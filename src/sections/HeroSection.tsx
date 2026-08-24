@@ -55,12 +55,12 @@ export const HeroSection: React.FC = () => {
 
         {/* Main Headline - Clean Bold Typography */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]">
-          Predictable, scalable growth.
+          Ready to take your brand to the next level?
         </h1>
 
         {/* Subtitle */}
         <p className="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed font-normal">
-          We build the strategy, frontend, and backend systems your brand needs to scale, driving measurable growth, efficiency, and higher returns.
+          We don’t just run your ads. We build the system that scales your brand from offer strategy and high-converting websites to email, SMS, and customer value optimization.
         </p>
 
         {/* Single Prominent Coral/Red CTA Button: Get Started */}
