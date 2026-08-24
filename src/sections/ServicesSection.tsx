@@ -90,6 +90,16 @@ export const ServicesSection: React.FC = () => {
     <section id="services" className="py-16 sm:py-24 bg-black relative">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
         
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
+          <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
+            Services we offer
+          </h2>
+          <p className="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto">
+            Frontend and backend growth systems engineered to scale your brand.
+          </p>
+        </div>
+        
         {/* Ultra-Minimal Services Card */}
         <div className="p-8 sm:p-14 rounded-3xl bg-[#0b0e14] border border-white/[0.08] shadow-2xl text-center space-y-10 sm:space-y-12">
           
